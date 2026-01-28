@@ -1,16 +1,14 @@
-// ignore_for_file: sort_child_properties_last
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class B02PageUi extends StatefulWidget {
-  const B02PageUi({super.key});
+class B03PageUi extends StatefulWidget {
+  const B03PageUi({super.key});
 
   @override
-  State<B02PageUi> createState() => _B02PageUiState();
+  State<B03PageUi> createState() => _B03PageUiState();
 }
 
-class _B02PageUiState extends State<B02PageUi> {
+class _B03PageUiState extends State<B03PageUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +42,7 @@ class _B02PageUiState extends State<B02PageUi> {
                   height: 100,
                 ),
                 Text(
-                  'Login here',
+                  'Create Account',
                   style: GoogleFonts.poppins(
                       fontWeight: FontWeight.bold,
                       color: const Color(0xff1F41BB),
@@ -54,14 +52,14 @@ class _B02PageUiState extends State<B02PageUi> {
                   height: 25,
                 ),
                 Text(
-                  'Welcome back you\'ve \n been missed!',
+                  'Create an account so you can explore all the \n existing jobs',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: 15,
                   ),
                 ),
-                SizedBox(height: 60),
+                SizedBox(height: 20),
                 Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: Column(
@@ -73,6 +71,26 @@ class _B02PageUiState extends State<B02PageUi> {
                           filled: true,
                           fillColor: const Color(0xffF1F4FF),
                           hintText: 'Email',
+                          hintStyle: GoogleFonts.poppins(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: BorderSide.none),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.all(30),
+                          filled: true,
+                          fillColor: const Color(0xffF1F4FF),
+                          hintText: 'Password',
+                          helperStyle: TextStyle(color: Colors.grey),
                           hintStyle: GoogleFonts.poppins(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -155,7 +173,7 @@ class _B02PageUiState extends State<B02PageUi> {
                         ),
                       ),
                       SizedBox(
-                        height: 60,
+                        height: 40,
                       ),
                       Text(
                         'Or continue with',
